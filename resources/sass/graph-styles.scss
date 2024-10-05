@@ -1,0 +1,202 @@
+.legend {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-check-inline {
+    margin-right: 15px;
+}
+
+.form-check-label {
+    margin-left: 5px;
+}
+
+.legend-checkbox {
+    top: 3px;
+}
+
+.pretty {
+    display: flex;
+    align-items: center;
+}
+
+.pretty label {
+    margin-left: 8px;
+}
+
+.pretty input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: relative;
+    appearance: none;
+    border: 1px solid #888;
+    border-radius: 3px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.pretty input[type="checkbox"]::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.pretty input[type="checkbox"]::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: translate(-50%, -50%) rotate(45deg) scale(0);
+    transition: transform 0.2s ease-in-out;
+}
+
+.created-checkbox input[type="checkbox"]:checked {
+    background-color: #1DA09C;
+    border-color: #1DA09C;
+}
+
+.submitted-checkbox input[type="checkbox"]:checked {
+    background-color: #3467eb;
+    border-color: #3467eb;
+}
+
+.pretty input[type="checkbox"]:checked::after {
+    transform: translate(-50%, -50%) rotate(45deg) scale(1);
+}
+
+//  radio
+.chart-type-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.chart-type-options .option {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid lightgrey;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.chart-type-options .option .dot {
+    height: 20px;
+    width: 20px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.chart-type-options .option .dot::before {
+    position: absolute;
+    content: "";
+    top: 4px;
+    left: 4px;
+    width: 12px;
+    height: 12px;
+    background: #0069d9;
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(1.5);
+    transition: all 0.3s ease;
+}
+
+.chart-type-options input[type="radio"] {
+    display: none;
+}
+
+#areaChart:checked~.option-area,
+#barChart:checked~.option-bar {
+    border-color: #0069d9;
+    background: #0069d9;
+}
+
+#areaChart:checked~.option-area .dot,
+#barChart:checked~.option-bar .dot {
+    background: #fff;
+}
+
+#areaChart:checked~.option-area span,
+#barChart:checked~.option-bar span {
+    color: #fff;
+}
+
+#areaChart:hover~.option-area .dot,
+#barChart:hover~.option-bar .dot {
+    color: #fff;
+}
+
+.chart-type-options .option span {
+    font-size: 16px;
+    color: #808080;
+}
+
+.no-data-message {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.option-bar:hover,
+.option-area:hover {
+    background-color: #e2e6ea;
+}
+
+@media (max-width: 480px) {
+    .apexcharts-legend {
+        padding: 0 !important;
+    }
+    .legend {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .pretty {
+        width: 100%;
+        justify-content: center;
+    }
+    .pretty input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+    }
+    .pretty label {
+        font-size: 14px;
+        margin-left: 6px;
+    }
+    .chart-type-options {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .chart-type-options .option {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+    .chart-type-options .option .dot {
+        height: 16px;
+        width: 16px;
+        margin-right: 8px;
+    }
+    .chart-type-options .option span {
+        font-size: 14px;
+    }
+}

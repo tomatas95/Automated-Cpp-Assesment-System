@@ -1,0 +1,238 @@
+.welcome-nav {
+    background: var(--welcome-intro-bg);
+    padding: 10px 50px;
+}
+
+.navbar-title,
+.footer-title {
+    color: #DFDFDF !important;
+    font-size: 1.5rem;
+}
+
+.nav-btn {
+    padding: 15px 18px !important;
+    border-radius: 25px;
+    margin: 5px;
+    text-align: center;
+    background-color: #DFDFDF;
+    color: var(--welcome-text);
+    font-weight: 500;
+    white-space: normal;
+    display: inline-block;
+    min-width: 80px;
+}
+
+.nav-btn:hover {
+    background-color: #FFFFFF;
+}
+
+.navbar-title:hover {
+    color: #FFFFFF;
+}
+
+.navbar-logo,
+.footer-logo {
+    width: 60px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.flag-icon {
+    width: 30px;
+    height: auto;
+    margin-right: 8px;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.nav-link {
+    white-space: normal;
+    padding: 12px 20px;
+    font-size: 1rem;
+    display: inline-block;
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+}
+
+.dropdown-item i {
+    margin-right: 8px;
+    align-self: center;
+    font-size: 1rem;
+}
+
+.dropdown-toggle {
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dropdown-toggle::after {
+    margin-left: 8px;
+    align-self: center;
+    transition: transform 0.3s ease;
+}
+
+.dropdown-open::after {
+    transform: rotate(180deg);
+}
+
+@media (max-width: 1100px) {
+    .nav-btn {
+        padding: 10px 13px !important;
+        font-size: 1rem !important;
+    }
+    .navbar-title {
+        display: none !important;
+    }
+}
+
+@media(max-width: 386px) {
+    .navbar-logo {
+        display: none !important;
+    }
+}
+
+@media (max-width: 380px) {
+    .dropdown-menu {
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: 150px !important;
+        text-align: left !important;
+    }
+    .dropdown-item {
+        font-size: 0.85rem !important;
+        padding: 6px 10px !important;
+    }
+    .dropdown-item i {
+        font-size: 0.9rem !important;
+        margin-right: 6px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .nav-btn {
+        padding: 8px 12px !important;
+        font-size: 0.9rem;
+    }
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .welcome-nav {
+        background: var(--welcome-intro-bg);
+        padding: 10px 20px;
+    }
+    .navbar-logo {
+        width: 50px;
+        height: auto;
+        margin-right: 10px;
+    }
+    .flag-icon {
+        width: 20px;
+        height: auto;
+        margin-right: 8px;
+    }
+    .dropdown-toggle::after {
+        margin-left: 8px;
+    }
+    .dropdown-item i {
+        margin-right: 5px;
+    }
+    .dropdown {
+        padding-left: 10px;
+    }
+    .nav-btn {
+        padding: 10px 15px;
+        border-radius: 20px;
+        margin: 5px;
+        text-align: center;
+        background-color: #DFDFDF;
+        color: var(--welcome-text);
+        font-weight: 500;
+    }
+    .nav-btn:hover {
+        background-color: #FFFFFF;
+    }
+    .navbar-nav {
+        display: flex;
+        justify-content: center;
+    }
+    .navbar-logo-wrap {
+        display: none;
+    }
+    .navbar-title {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+    .d-lg-none.ml-auto {
+        margin-left: 0;
+    }
+    .navbar-toggler {
+        margin-left: 15px;
+        margin-right: 0;
+    }
+    .footer-logo {
+        width: 50px;
+        margin-right: 10px;
+    }
+    .footer-title {
+        font-size: 1.2rem;
+    }
+    .navbar-title {
+        display: none !important;
+    }
+    .navbar-logo {
+        width: 40px;
+        display: block;
+    }
+    .nav-link,
+    .dropdown-toggle {
+        font-size: 0.9rem !important;
+        padding: 6px 8px !important;
+    }
+    .navbar-toggler {
+        padding: 6px 8px;
+    }
+    .dropdown {
+        margin-left: 0;
+    }
+    .ml-auto {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: auto;
+    }
+    .flag-icon {
+        width: 20px;
+    }
+    .mobileHamburger {
+        min-width: 160px !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .nav-btn {
+        padding: 15px 15px;
+        font-size: 1rem;
+    }
+    .navbar-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .navbar-title {
+        font-size: 1.5rem;
+    }
+}

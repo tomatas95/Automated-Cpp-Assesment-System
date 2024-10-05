@@ -1,0 +1,278 @@
+.tooltip-text {
+    visibility: hidden;
+    position: absolute;
+    z-index: 2;
+    max-width: 300px;
+    color: white;
+    font-size: 12px;
+    background-color: #17a2b8;
+    border-radius: 6px;
+    padding: 10px 15px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: ellipsis;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    border-width: 6px;
+    border-style: solid;
+    border-color: #17a2b8 transparent transparent transparent;
+    z-index: 1;
+}
+
+.hover-text:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(-5px);
+}
+
+#center {
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hover-text {
+    min-width: 280px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+
+.reg-tool-tip-wrapper {
+    position: absolute;
+    top: 50%;
+    right: -44px;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: #17a2b8;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.reg-tool-tip {
+    visibility: hidden;
+    position: absolute;
+    background-color: #17a2b8;
+    color: #fff;
+    max-width: 400px;
+    width: 300px;
+    font-size: 13px;
+    font-weight: 300;
+    padding: 10px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    text-align: left;
+    white-space: normal;
+    z-index: 1;
+    bottom: 55px;
+    right: 0;
+    transform: translateX(0);
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.reg-tool-tip::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: 10px;
+    transform: translateX(0);
+    border-width: 8px;
+    border-style: solid;
+    border-color: #17a2b8 transparent transparent transparent;
+    z-index: 1;
+}
+
+.reg-tool-tip-wrapper:hover .reg-tool-tip,
+.reg-tool-tip-wrapper:hover .reg-tool-tip::before {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.auth-container {
+    text-align: center;
+}
+
+.auth-text {
+    font-size: 14px;
+    color: #a0a0a0;
+    margin-bottom: 15px;
+}
+
+.auth-wrapper {
+    display: inline-flex;
+    list-style: none;
+    padding: 0;
+}
+
+.auth-wrapper .auth-icon {
+    position: relative;
+    background: #ffffff;
+    border-radius: 50%;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.auth-wrapper .auth-icon .auth-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+.auth-wrapper .auth-tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #ffffff;
+    color: #ffffff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.auth-wrapper .auth-tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #ffffff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.auth-wrapper .auth-icon:hover .auth-tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.auth-wrapper .auth-icon:hover span,
+.auth-wrapper .auth-icon:hover a,
+.auth-wrapper .auth-icon:hover .auth-tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.auth-wrapper .github:hover,
+.auth-wrapper .github:hover .auth-tooltip,
+.auth-wrapper .github:hover .auth-tooltip::before {
+    background: #333333;
+    color: #ffffff;
+}
+
+.auth-wrapper .gmail:hover,
+.auth-wrapper .gmail:hover .auth-tooltip,
+.auth-wrapper .gmail:hover .auth-tooltip::before {
+    background: #CD201F;
+    color: #ffffff;
+}
+
+.automatic-check-tool-tip {
+    position: relative;
+    margin-top: 20px;
+    right: 10px;
+}
+
+.public-tool-tip {
+    margin-top: 30px;
+}
+
+.ex-tool-tip-wrapper {
+    position: relative;
+    display: inline-block;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: #17a2b8;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    z-index: 100 !important;
+}
+
+.ex-tool-tip::before {
+    content: "";
+    position: absolute;
+    top: 105%;
+    left: 10px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: #17a2b8 transparent transparent transparent;
+    z-index: 1;
+}
+
+.ex-tool-tip-wrapper:hover .ex-tool-tip,
+.ex-tool-tip-wrapper:hover .ex-tool-tip::before {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(-5px);
+}
+
+.ex-tool-tip {
+    visibility: hidden;
+    position: absolute;
+    background-color: #17a2b8;
+    color: #fff;
+    max-width: 500px;
+    width: 400px;
+    font-size: 13px;
+    font-weight: 300;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left;
+    white-space: normal;
+    bottom: 45px;
+    left: 5%;
+    transform: translateX(10px);
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+@media (max-width: 450px) {
+    .ex-tool-tip {
+        max-width: 350px;
+        width: 300px;
+    }
+}

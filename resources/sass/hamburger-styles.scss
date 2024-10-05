@@ -1,0 +1,46 @@
+.mobileHamburger {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 1px;
+    width: 30%;
+    background-color: rgba(56, 54, 54, 0.9);
+    border-radius: 5px;
+    z-index: 2;
+    text-align: center;
+}
+
+.mobileHamburger .nav-item {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.mobileHamburger .nav-link {
+    padding: 10px 15px !important;
+    color: #000;
+    display: block;
+    width: auto;
+    text-align: center;
+}
+
+.mobileHamburger .nav-link:first-child {
+    margin-top: 10px !important;
+}
+
+.navbar-toggler {
+    border: none;
+    background: transparent;
+}
+
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba%28255, 255, 255, 1%29" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E') !important;
+    width: 30px;
+    height: 30px;
+}
+
+.d-lg-none.ml-auto {
+    position: relative;
+    right: 10px;
+}

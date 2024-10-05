@@ -1,0 +1,309 @@
+@import 'bootstrap/scss/bootstrap';
+:root {
+    --welcome-intro-bg: linear-gradient(0deg, #3C4859, #373737);
+    --welcome-section-break: linear-gradient(0deg, #10C1DF, #1C88D6);
+    --welcome-mid-headings: #1DA09C;
+    --welcome-text: #000000;
+}
+
+.welcome-section {
+    position: relative;
+}
+
+.image-container {
+    position: relative;
+}
+
+.welcome-header-img {
+    max-height: 500px;
+}
+
+.welcome-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    background: var(--welcome-intro-bg);
+    transform: skewY(15deg);
+    transform-origin: bottom right;
+    z-index: -1;
+}
+
+.container-fluid {
+    position: relative;
+}
+
+.img-fluid {
+    position: relative;
+    z-index: 1;
+}
+
+.welcome-btns {
+    background-color: #F5FFCB !important;
+    color: var(--welcome-text) !important;
+    font-weight: 500 !important;
+    text-transform: uppercase;
+    border-radius: 30px !important;
+    width: auto !important;
+    white-space: nowrap;
+    padding: 15px 25px !important;
+    font-size: 1.5rem !important;
+}
+
+.welcome-btns:hover {
+    background-color: #DFF8D6 !important;
+}
+
+.welcome-btns:hover:active {
+    background-color: #DFF8D6 !important;
+    color: var(--welcome-text);
+}
+
+.intro-text {
+    color: #C8C8C8;
+    margin: 25px;
+    font-size: 1.2rem;
+}
+
+.intro-headings {
+    color: #FFFFFF;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.text-container {
+    padding: 5px;
+}
+
+.mid-headings {
+    color: var(--welcome-mid-headings);
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.mid-text {
+    color: var(--welcome-text);
+    font-size: 1.2rem;
+    margin: 25px;
+}
+
+.section-break-heading {
+    color: var(--welcome-text);
+    font-size: 3rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin: 15px;
+}
+
+.section-break-subheading {
+    background: var(--welcome-section-break);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin: 15px;
+    position: relative;
+}
+
+.section-break-subheading::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 3px;
+    background: var(--welcome-section-break);
+}
+
+.section-icons {
+    padding-top: 50px;
+}
+
+.icon-container {
+    padding: 20px;
+}
+
+.icon-heading {
+    color: var(--welcome-mid-headings);
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.icon-text {
+    color: var(--welcome-text);
+    font-size: 1.2rem;
+    margin: 25px;
+}
+
+.icon-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.icon-item img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.icon-item p {
+    color: var(--welcome-text);
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+.final-section {
+    padding: 10px 0;
+}
+
+.final-section-subheading {
+    color: #6495ED;
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 10px;
+    position: relative;
+}
+
+.intro-btn-transfer {
+    text-decoration: none;
+    color: var(--welcome-text);
+}
+
+.flag-icon {
+    width: 30px;
+    height: auto;
+    margin-right: 8px;
+}
+
+.dropdown-toggle::after {
+    margin-left: 8px;
+}
+
+.btn-primary {
+    background-color: #1DA09C;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #17a085;
+}
+
+.notepad-illustration {
+    max-height: 500px !important;
+    // width: 100%;
+    height: auto;
+}
+
+@media (max-width: 1000px) {
+    .welcome-header-img {
+        max-width: 425px;
+    }
+    .intro-headings {
+        font-size: 2.2rem;
+    }
+    .intro-text {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .intro-headings {
+        font-size: 1.8rem;
+        color: var(--welcome-mid-headings);
+    }
+    .intro-text {
+        color: var(--welcome-text);
+        font-size: 1.2rem;
+        margin: 25px;
+    }
+    .img-fluid {
+        max-height: 300px;
+    }
+    .intro-headings {
+        color: var(--welcome-mid-headings);
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        font-size: 2rem !important;
+    }
+    .mid-headings {
+        margin-top: 25px;
+    }
+    .carousel-container {
+        width: 100%;
+    }
+    .notepad-illustration {
+        max-height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .intro-headings {
+        font-size: 1.5rem;
+    }
+    .intro-text {
+        color: var(--welcome-text);
+        font-size: 1.2rem;
+        margin: 25px;
+    }
+    .mid-text {
+        color: var(--welcome-text);
+        font-size: 1.2rem;
+        margin: 25px;
+    }
+    .img-fluid {
+        max-height: 250px;
+    }
+    .welcome-section::before {
+        height: 50vh;
+    }
+    .sign-up-btn {
+        margin-bottom: 15px;
+    }
+    .notepad-illustration {
+        max-height: 250px;
+    }
+}
+
+@media (max-width: 425px) {
+    .welcome-header-img,
+    .img-fluid {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+    }
+    .intro-headings {
+        font-size: 1.5rem;
+    }
+    .intro-text {
+        font-size: 1rem;
+    }
+    .section-break-subheading,
+    .section-break-heading,
+    .final-section-subheading {
+        font-size: 2rem;
+        letter-spacing: 2px;
+        margin: 10px;
+    }
+    .mid-headings {
+        font-size: 1.5rem;
+    }
+}

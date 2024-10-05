@@ -1,0 +1,52 @@
+.welcome-nav {
+  background: var(--welcome-intro-bg);
+  padding: 10px 50px;
+}
+
+.navbar-title {
+  color: #DFDFDF;
+  font-size: 1.5rem;
+}
+
+.nav-btn {
+  padding: 10px 20px;
+  border-radius: 25px;
+  margin: 5px;
+  width: 100px;
+  text-align: center;
+  background-color: #DFDFDF;
+  color: var(--welcome-text);
+  font-weight: 500;
+}
+
+.nav-btn:hover {
+  background-color: #FFFFFF;
+}
+
+.navbar-title:hover {
+  color: #FFFFFF;
+}
+
+.navbar-logo {
+  width: 60px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.flag-icon {
+  width: 30px;
+  height: auto;
+  margin-right: 8px;
+}
+
+.dropdown-toggle::after {
+  margin-left: 8px;
+}
+
+.dropdown-item i {
+  margin-right: 10px;
+}
+
+.dropdown {
+  padding-left: 10px;
+}/*# sourceMappingURL=navbar.css.map */

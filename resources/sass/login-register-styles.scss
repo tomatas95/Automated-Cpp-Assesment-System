@@ -1,0 +1,149 @@
+@import 'bootstrap/scss/bootstrap';
+:root {
+    --welcome-intro-bg: linear-gradient(0deg, #3C4859, #373737);
+    --welcome-text: #000000;
+}
+
+*:focus,
+*:active {
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.register-section {
+    background-color: #E4E4E4;
+    height: 100vh;
+}
+
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+}
+
+.register-card {
+    background: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+.register-logo {
+    width: 100px;
+    height: auto;
+}
+
+.register-title {
+    color: var(--welcome-text);
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.register-btn {
+    background-color: #A18CD1 !important;
+    color: #FFFFFF !important;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    width: auto;
+    white-space: nowrap;
+    padding: 15px 25px !important;
+    font-size: 1.5rem;
+}
+
+.register-btn:hover {
+    background-color: #b68aca !important;
+    color: #FFFFFF !important;
+}
+
+.register-btn:hover:active {
+    background-color: #c56fed;
+    color: #fff;
+}
+
+.disabled-btn {
+    background-color: #c56fed !important;
+    color: #fff !important;
+}
+
+.register-login-link {
+    text-decoration: none;
+}
+
+.register-login-link:hover {
+    text-decoration: underline;
+}
+
+.helper-text {
+    color: #A0A0A0;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.recover-pass-btn:hover:active {
+    background-color: #c56fed;
+    color: #fff;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.form-control {
+    padding-right: 40px;
+}
+
+.togglePassword {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.togglePassword:hover {
+    opacity: 0.6;
+}
+
+.toggleIcon {
+    opacity: 60%;
+    transition: opacity 0.3s ease;
+}
+
+.toggleIcon.active {
+    opacity: 100%;
+}
+
+.form-group {
+    position: relative;
+}
+
+.is-valid {
+    background-image: none !important;
+    padding-right: 0.75rem;
+}
+
+.is-invalid {
+    background-image: none !important;
+    padding-right: 0.75rem;
+}
+
+.is-valid {
+    border-color: #28a745 !important;
+}
+
+.is-invalid {
+    border-color: #dc3545 !important;
+}
+
+@media (max-width: 576px) {
+    .register-card form {
+        margin-top: 20px;
+    }
+    .register-login-link i {
+        margin-left: 5px;
+    }
+}
